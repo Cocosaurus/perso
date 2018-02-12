@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corentin Vilsalmon | Développeur & Intégrateur Web</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Corentin Vilsalmon - Site Web personnel">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Corentin Vilsalmon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="favicon" rel="icon" type="image/png" href="<?= $wwwUrl ?>/images/favicon.png" />
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css" media="screen">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/base.css" media="screen">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Graduate|Open+Sans+Condense" rel="stylesheet">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/portfolio.css" media="screen">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<header>
+    <div id="opacity">
+        <div id="upperhead">
+            <a href="<?= $requestUrl ?>/"><h1 class="uppercase">corentin vilsalmon</h1></a>
+            <ul>
+                <a class="uppercase" href="<?= $requestUrl ?>/">home</a>
+                <a class="uppercase" href="<?= $requestUrl ?>/about">à propos</a>
+                <a class="uppercase" href="<?= $requestUrl ?>/contact">contact</a>
+            </ul>
+        </div>
+          <div class="divColor redTheme"></div>
+        <div id="middlehead">
+            <h2 class="uppercase">intégration & développement web, auteur</h2>
+            <figure><a href="<?= $requestUrl ?>/"><img src="<?= $wwwUrl ?>/images/portrait.jpg" alt="Corentin Vilsalmon photo"></a></figure>
+            <div id="lowerhead">
+                <nav>
+                    <button class="uppercase" id="portfolio" type="button"><p>portfolio</p></button>
+                    <button class="uppercase" id="cv" type="button"><p>c.v.</p></button>
+                    <button class="uppercase" id="roman" type="button"><p>roman</p></button>
+                    <button class="uppercase" id="blog" type="button"><p>blog</p></button>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul id="social">
+        <a href="https://fr.linkedin.com/in/corentin-vilsalmon-9412886b" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/corentin.vilsalmon" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/corentinvil" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/corentinvil/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    </ul>
+    <ul id="links">
+        <a class="uppercase" href="<?= $requestUrl ?>/legal">mentions légales</a>
+        <a class="uppercase" href="<?= $requestUrl ?>/about">à propos</a>
+        <a class="uppercase" href="<?= $requestUrl ?>/contact">contact</a>
+        <p>© Corentin Vilsalmon - 2018</p>
+    </ul>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

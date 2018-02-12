@@ -1,0 +1,37 @@
+<!-- Code HTML à écrire -->
+<div id="content">
+	<section class="scroll">
+		<h1>Bienvenue sur mon site !</h1>
+		<article id="presentation">
+			<p>Il était une fois un jeune homme qui avait l'écriture comme passion. Après avoir passé trois ans pour devenir journaliste et obtenir son diplôme, celui-ci s'est finalement heurté à la dure loi du marché. Malgré une expérience de plus de trois ans au sein de plusieurs sites Internet, lorsque le temps est venu de voguer vers de nouvelles aventures, les choses n'ont pas tourné comme il l'aurait espéré. Puis l'illumination : et s'il se tournait vers le développement et l'intégration web ? Bingo !</p>
+			<p>Je m'appelle Corentin Vilsalmon et, si cette introduction ne vous a pas fait fuir, je tiens à vous rassurer sur le fait que ce site est tout à fait normal. Malgré la tonalité bleue très marquée. Peut-être qu'un jour je proposerais un petit bouton pour changer l'aspect du site (en rouge ?), mais pour l'instant le bleu me plait.</p>
+		</article>
+	</section>
+	<section>
+		<h1>Dernier article publié :</h1>
+        <?php foreach($article as $one): ?>
+            <article>
+                <h2><?= $one['title']; ?></h2>
+                <small>publié le : <?= $one['postDate']; ?></small>
+                <?= $one['excerpt']; ?>
+                <button class="article" type="button" data-id="<?= $one['id'] ?>">Lire la suite</button>
+            </article>
+        <?php endforeach; ?>
+	</section>
+	<section>
+		<h1>Dernier chapitre publié :</h1>
+        <?php foreach($chapter as $two): ?>
+            <article>
+                <h2><?= $two['title']; ?></h2>
+                <?= substr($two['content'], 0, 350)." [...]"; ?>
+                <button class="chapter" type="button" data-id="<?= $two['id'] ?>">Lire la suite</button>
+            </article>
+        <?php endforeach; ?>
+	</section>
+	<section id="video">
+        <h1>Mon son du moment :</h1>
+				<div id="video-container">
+					<iframe src="https://www.youtube.com/embed/ZIEgfEIdEag" frameborder="0" allowfullscreen></iframe>
+				</div>
+  </section>
+</div>
